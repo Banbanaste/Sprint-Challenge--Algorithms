@@ -18,14 +18,14 @@ c)
 
 n floors in a building, find floor f (where arbitrary eggs don't arbitrarily break)
 
-create a binary search tree from list of n floors of a building
+create a binary search tree from of n floors of a building
 
-check if dropping an egg from each leftern node causes the egg to break
+issue a Preorder traversal of the tree, checking the root floor first.
 
-if it causes an egg to break continue to left node
+check if dropping an egg from each node, starting at the root, causes the egg to break
 
-when the egg does not break continue right node, then left etc..
+egg != "broken" is the base case
 
-when the egg breaks on a node save and return that value
+when the egg == "broken" return that floor
 
-- the runtime is O(log(n)) at a minimum or O(n) at a maximum, depending on which floor the egg breaks. For example; If the egg breaks on the highest floor of the building the runtime is O(n) because we have to traverse the entire tree before we return a value.
+the runtime is O(log(n)) at a minimum or O(n) at a maximum, depending on which floor the egg breaks. For example; If the egg breaks on the highest floor of the building the runtime is O(n) because we have to traverse the entire tree before we return a value.
